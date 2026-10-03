@@ -1,58 +1,232 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GD Global은 Windows 데이터 복구 및 모바일 유틸리티 소프트웨어를 개발합니다.">
-  <meta name="theme-color" content="#f7faff">
-  <title>GD Global | Software & Technology</title>
+  <meta name="description" content="GD Global is a South Korea-based sourcing and market development partner connecting overseas manufacturers with Korean industrial buyers and Korean suppliers with overseas markets.">
+  <meta name="theme-color" content="#071b2b">
+  <meta property="og:title" content="GD Global | Sourcing & Market Development">
+  <meta property="og:description" content="South Korea-based sourcing, supplier development and market-entry support.">
+  <meta property="og:type" content="website">
+  <title>GD Global | Sourcing & Market Development</title>
   <style>
-    :root{color-scheme:light;--navy:#112b4d;--ink:#193453;--muted:#536981;--line:#dce8f2;--blue:#096fc8;--cyan:#00a4c8;--bg:#f7faff}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Noto Sans KR",sans-serif;line-height:1.7}
-    a{color:var(--blue)}a:focus-visible{outline:3px solid var(--cyan);outline-offset:4px}
-    .container{width:min(1100px,calc(100% - 40px));margin:auto}
-    header{background:#fff;border-bottom:1px solid var(--line)}
-    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{display:inline-flex;gap:11px;align-items:center;text-decoration:none;color:var(--navy);font-size:1.25rem;font-weight:800;letter-spacing:-.04em}
-    .symbol{display:grid;place-items:center;width:38px;height:38px;color:white;background:linear-gradient(135deg,#1066bd,#00b8d1);border-radius:12px;font-size:.95rem;letter-spacing:-.07em;box-shadow:0 5px 16px #0784c533}
-    nav{display:flex;gap:22px;flex-wrap:wrap}nav a{text-decoration:none;color:var(--muted);font-weight:650;font-size:.92rem}
+    :root{
+      --navy:#071b2b;--navy2:#0d2b42;--blue:#1374d1;--cyan:#34b8c6;
+      --ink:#152739;--muted:#66798a;--line:#dfe7ed;--soft:#f4f8fb;--white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);background:#fff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI","Noto Sans KR",Arial,sans-serif;line-height:1.65}
+    a{color:inherit}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(223,231,237,.9)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:-.035em;color:var(--navy);font-size:1.25rem}
+    .mark{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;color:#fff;background:linear-gradient(145deg,var(--blue),var(--cyan));font-size:.9rem;letter-spacing:-.05em;box-shadow:0 8px 24px rgba(19,116,209,.25)}
+    nav{display:flex;gap:24px;flex-wrap:wrap}
+    nav a{text-decoration:none;font-size:.9rem;font-weight:700;color:#526576}
     nav a:hover{color:var(--blue)}
-    .hero{padding:98px 0 90px;background:radial-gradient(circle at 84% 24%,#c8eefb 0,transparent 35%),linear-gradient(160deg,#fff,#eef7ff)}
-    .eyebrow{font-size:.8rem;letter-spacing:.14em;font-weight:850;text-transform:uppercase;color:#137aaf}
-    h1{font-size:clamp(2.6rem,6vw,4.7rem);line-height:1.12;letter-spacing:-.06em;margin:17px 0 21px;color:var(--navy)}
-    .hero p{font-size:1.15rem;max-width:650px;color:var(--muted);margin:0 0 29px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 21px;border-radius:12px;border:1px solid var(--blue);font-weight:750;text-decoration:none}
-    .button.primary{background:var(--blue);color:white}.button.secondary{background:white}
-    section{padding:74px 0}h2{font-size:clamp(1.75rem,3vw,2.35rem);letter-spacing:-.04em;line-height:1.25;color:var(--navy);margin:0 0 15px}
-    .intro{color:var(--muted);max-width:700px;margin:0 0 30px}
+    .hero{color:#fff;background:
+      radial-gradient(circle at 82% 18%,rgba(52,184,198,.28),transparent 28%),
+      radial-gradient(circle at 16% 90%,rgba(19,116,209,.28),transparent 32%),
+      linear-gradient(145deg,#061724,#0d2b42 62%,#113a50);
+      padding:104px 0 96px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center}
+    .eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:850;color:#4fd3dc}
+    h1{font-size:clamp(2.7rem,6vw,5.35rem);line-height:1.03;letter-spacing:-.065em;margin:18px 0 24px;max-width:900px}
+    .hero p{font-size:1.12rem;color:#ccdae5;max-width:700px;margin:0 0 34px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border-radius:11px;font-weight:800;text-decoration:none;border:1px solid rgba(255,255,255,.32)}
+    .btn.primary{background:#fff;color:var(--navy);border-color:#fff}
+    .btn.ghost{color:#fff}
+    .hero-card{border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);border-radius:24px;padding:28px;box-shadow:0 24px 70px rgba(0,0,0,.18)}
+    .hero-card h3{margin:0 0 16px;font-size:1.05rem}
+    .hero-card ul{list-style:none;padding:0;margin:0;display:grid;gap:12px;color:#d8e5ee}
+    .hero-card li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .hero-card li:last-child{border-bottom:0}
+    section{padding:84px 0}
+    .section-head{max-width:760px;margin-bottom:34px}
+    .section-head .eyebrow{color:#197aa9}
+    h2{font-size:clamp(2rem,4vw,3.15rem);line-height:1.13;letter-spacing:-.05em;color:var(--navy);margin:12px 0 14px}
+    .lead{color:var(--muted);font-size:1.03rem;margin:0}
     .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-    .card{background:white;border:1px solid var(--line);border-radius:20px;padding:29px;box-shadow:0 12px 32px #123e6308}
-    .card .glyph{display:grid;place-items:center;width:52px;height:52px;border-radius:15px;background:#e7f6ff;color:#087ab3;font-size:1.5rem}
-    .card h3{font-size:1.18rem;margin:22px 0 8px;color:var(--navy)}.card p{color:var(--muted);margin:0}
-    .tag{display:inline-block;margin-top:20px;padding:4px 11px;border-radius:50px;background:#eff6fb;color:#326386;font-size:.78rem;font-weight:750}
-    .about{background:white;border-block:1px solid var(--line)}
-    .about-layout{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-    .about p{color:var(--muted)}.panel{background:linear-gradient(140deg,#102e55,#0876aa);color:#fff;padding:35px;border-radius:23px}
-    .panel strong{font-size:1.6rem;letter-spacing:-.04em}.panel p{color:#d4edff;margin-bottom:0}
-    .contact{background:#f0f7fc}.contact-box{border:1px solid var(--line);background:white;border-radius:20px;padding:30px;max-width:760px}
-    footer{background:#102b49;color:#d8e7f3;padding:27px 0;font-size:.85rem}footer .container{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}
-    footer a{color:#d8e7f3}
-    @media(max-width:760px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column;gap:12px}.hero{padding:70px 0}.grid,.about-layout{grid-template-columns:1fr}section{padding:55px 0}nav{gap:17px}}
+    .card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff;box-shadow:0 12px 34px rgba(7,27,43,.045)}
+    .num{font-size:.76rem;letter-spacing:.11em;font-weight:850;color:var(--blue);text-transform:uppercase}
+    .card h3{font-size:1.17rem;color:var(--navy);margin:12px 0 8px}
+    .card p{margin:0;color:var(--muted)}
+    .soft{background:var(--soft);border-block:1px solid var(--line)}
+    .industry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .industry{background:#fff;border:1px solid var(--line);border-radius:17px;padding:24px}
+    .industry strong{display:block;color:var(--navy);font-size:1.08rem;margin-bottom:6px}
+    .industry span{color:var(--muted)}
+    .process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+    .step{padding:24px 18px;border-top:3px solid var(--blue);background:#fff;border-radius:0 0 16px 16px;border-inline:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .step b{display:block;color:var(--navy);margin-bottom:6px}
+    .step span{color:var(--muted);font-size:.94rem}
+    .about-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}
+    .facts{background:var(--navy);color:#fff;border-radius:22px;padding:30px}
+    .fact{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+    .fact:last-child{border-bottom:0}
+    .fact small{display:block;color:#91aabd;text-transform:uppercase;letter-spacing:.08em;font-weight:750}
+    .fact strong{display:block;margin-top:3px;font-size:1rem}
+    .contact{background:linear-gradient(140deg,#eef7fb,#f7fbfd)}
+    .contact-box{display:flex;justify-content:space-between;gap:32px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:32px}
+    .contact-box h3{font-size:1.5rem;color:var(--navy);margin:0 0 8px}
+    .contact-box p{margin:0;color:var(--muted)}
+    footer{background:#061724;color:#aebfcb;padding:30px 0;font-size:.84rem}
+    .foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    footer a{color:#dce8ef}
+    @media(max-width:850px){
+      .hero-grid,.about-wrap{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .industry-grid{grid-template-columns:1fr}
+      .process{grid-template-columns:1fr 1fr}
+      .hero{padding:76px 0}
+      nav{gap:14px}
+    }
+    @media(max-width:560px){
+      .nav{align-items:flex-start;flex-direction:column;padding:14px 0}
+      .process{grid-template-columns:1fr}
+      .contact-box{align-items:flex-start;flex-direction:column}
+      section{padding:64px 0}
+      h1{font-size:2.75rem}
+    }
   </style>
 </head>
 <body>
-<header><div class="container nav"><a class="brand" href="#home"><span class="symbol" aria-hidden="true">GD</span>GD Global</a><nav aria-label="주요 메뉴"><a href="#products">제품</a><a href="#about">회사 소개</a><a href="#contact">문의</a></nav></div></header>
-<main>
-  <div class="hero" id="home"><div class="container"><div class="eyebrow">Software &amp; Technology</div><h1>Technology that<br>makes things simpler.</h1><p>GD Global은 데이터 복구와 일상적인 디지털 작업을 돕는 소프트웨어를 개발합니다. 안전하고 이해하기 쉬운 사용 경험을 추구합니다.</p><div class="actions"><a class="button primary" href="#products">제품 살펴보기 →</a><a class="button secondary" href="#contact">문의하기</a></div></div></div>
-  <section id="products"><div class="container"><div class="eyebrow">Our software</div><h2>개발 중인 소프트웨어</h2><p class="intro">각 제품은 별도로 개발·검증 중입니다. 이 페이지는 제품 소개용이며, 다운로드나 정식 출시를 의미하지 않습니다.</p><div class="grid">
-    <article class="card"><div class="glyph" aria-hidden="true">↺</div><h3>Recovery Doctor</h3><p>Windows용 HDD, 외장하드, USB 및 메모리카드 논리 복구 솔루션. 원본 데이터 보호를 중심으로 설계하고 있습니다.</p><span class="tag">개발 및 검증 중</span></article>
-    <article class="card"><div class="glyph" aria-hidden="true">▣</div><h3>DataRewind</h3><p>Android 기기에서 접근 가능한 파일을 찾고 정리하는 모바일 앱. 삭제된 원본 데이터의 물리 복구와는 구분됩니다.</p><span class="tag">개발 및 검증 중</span></article>
-    <article class="card"><div class="glyph" aria-hidden="true">✧</div><h3>More utilities</h3><p>일상 작업을 더 간편하게 만드는 실용적인 소프트웨어를 연구하고 있습니다.</p><span class="tag">추후 안내</span></article>
-  </div></div></section>
-  <section class="about" id="about"><div class="container about-layout"><div><div class="eyebrow">About us</div><h2>GD Global</h2><p>GD Global은 사용자가 기술적인 절차를 모두 알지 않아도 디지털 도구를 쉽게 활용할 수 있도록 소프트웨어를 개발합니다.</p><p>제품 제공 여부, 지원 범위 및 출시 일정은 검증이 완료된 후 안내합니다.</p></div><div class="panel"><strong>Practical software.<br>Thoughtful experience.</strong><p>기술의 복잡함은 줄이고, 사용자에게 필요한 기능에 집중합니다.</p></div></div></section>
-  <section class="contact" id="contact"><div class="container"><div class="eyebrow">Contact</div><h2>문의</h2><div class="contact-box"><p>제품 및 사업 관련 문의 채널은 준비 중입니다. 현재는 공개 GitHub 프로필에서 개발 주체를 확인할 수 있습니다.</p><a href="https://github.com/modernsnc2022-ai" rel="noopener noreferrer">GD Global GitHub 프로필 →</a><p style="font-size:.9rem;color:var(--muted)">사업자 연락처와 개인정보는 게시자 확인 후 별도로 공개합니다.</p></div></div></section>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top"><span class="mark">GD</span>GD Global</a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#approach">How we work</a>
+      <a href="#company">Company</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">South Korea · Sourcing & Market Development</div>
+        <h1>Connecting real demand with reliable supply.</h1>
+        <p>GD Global connects overseas manufacturers with qualified opportunities in South Korea and develops export opportunities for Korean suppliers in overseas markets. We focus on practical, transaction-oriented sourcing and repeat business development.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:marcusoh@gdglobal.kr">Contact GD Global</a>
+          <a class="btn ghost" href="#approach">How we work</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>What we focus on</h3>
+        <ul>
+          <li>Supplier qualification and market fit</li>
+          <li>Buyer and account development</li>
+          <li>Direct supplier-to-customer transactions</li>
+          <li>Protected account & non-circumvention structures</li>
+          <li>Repeat-order commission cooperation</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Services</div>
+        <h2>Practical business development between Korea and global markets.</h2>
+        <p class="lead">We do not operate as a traditional inventory-heavy importer. Our role is to qualify opportunities, connect the right counterparties, and support repeat transactions.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="num">01 · Korea Market Development</div>
+          <h3>For overseas manufacturers</h3>
+          <p>Identify suitable Korean market segments, qualify potential industrial buyers, coordinate product and commercial discussions, and develop new accounts.</p>
+        </article>
+        <article class="card">
+          <div class="num">02 · Export Market Development</div>
+          <h3>For Korean suppliers</h3>
+          <p>Find overseas demand, qualify buyer requirements, support supplier-buyer introductions, and help structure repeat-order cooperation.</p>
+        </article>
+        <article class="card">
+          <div class="num">03 · Protected Account Cooperation</div>
+          <h3>Clear account ownership</h3>
+          <p>We prefer account-by-account protection rather than broad territorial exclusivity, with non-circumvention and agreed commission terms for initial and repeat orders.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="industries">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Industries</div>
+        <h2>Focused on opportunities where technical fit and repeat orders matter.</h2>
+        <p class="lead">Our sourcing scope is flexible. Current business-development work includes industrial materials, precision manufacturing and selected Korea-origin export products.</p>
+      </div>
+      <div class="industry-grid">
+        <div class="industry"><strong>Engineering Plastics & Industrial Materials</strong><span>Recycled PA6 / PA66, compounds, specialty raw materials and related industrial sourcing.</span></div>
+        <div class="industry"><strong>Precision Manufacturing</strong><span>CNC / MCT machining, precision metal parts, forging, press, die-casting and drawing-based custom manufacturing.</span></div>
+        <div class="industry"><strong>Industrial Supply & Components</strong><span>Selected MRO, machinery, components and supplier-development opportunities with repeat purchasing potential.</span></div>
+        <div class="industry"><strong>Korea-Origin Export Products</strong><span>Selected Korean manufacturers and differentiated products with verified overseas demand.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How we work</div>
+        <h2>Supplier-first qualification. Buyer disclosure only when the structure is ready.</h2>
+      </div>
+      <div class="process">
+        <div class="step"><b>1. Qualify</b><span>Confirm product capability, technical fit, export readiness and commercial terms.</span></div>
+        <div class="step"><b>2. Protect</b><span>Agree on account-conflict checks, protected-account principles and repeat-order commission.</span></div>
+        <div class="step"><b>3. Introduce</b><span>Disclose target market and buyer identity only at the appropriate stage.</span></div>
+        <div class="step"><b>4. Develop</b><span>Support samples, quotations, technical discussion and the path to repeat orders.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="company">
+    <div class="container about-wrap">
+      <div>
+        <div class="eyebrow">Company</div>
+        <h2>GD Global</h2>
+        <p class="lead">GD Global is a South Korea-based sourcing and business-development company. We work across import sourcing, overseas market development and technology projects, with a practical emphasis on verifiable counterparties and direct transactions between suppliers and customers.</p>
+        <p class="lead" style="margin-top:18px">For industrial projects, we focus on finding the right technical and commercial match rather than holding inventory ourselves.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><small>Business name</small><strong>지디글로벌 / GD Global</strong></div>
+        <div class="fact"><small>Business registration no.</small><strong>189-39-00792</strong></div>
+        <div class="fact"><small>Representative</small><strong>Marcus Oh</strong></div>
+        <div class="fact"><small>Location</small><strong>Hwaseong-si, Gyeonggi-do, Republic of Korea</strong></div>
+        <div class="fact"><small>Business address</small><strong>4F, 402-P189, 270 Dongtansillicheon-ro, Dongtan-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h3>Business inquiries</h3>
+          <p>For sourcing, Korea market development, supplier cooperation or export opportunities.</p>
+        </div>
+        <a class="btn primary" style="background:#0d2b42;color:#fff;border-color:#0d2b42" href="mailto:marcusoh@gdglobal.kr">marcusoh@gdglobal.kr</a>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="container"><span>© 2026 GD Global. All rights reserved.</span><span><a href="/privacy.html">개인정보처리방침</a> · <a href="#home">맨 위로 ↑</a></span></div></footer>
+
+<footer>
+  <div class="container foot">
+    <span>© 2026 GD Global. All rights reserved.</span>
+    <span>South Korea · <a href="mailto:marcusoh@gdglobal.kr">marcusoh@gdglobal.kr</a> · <a href="/privacy.html">Privacy Policy</a></span>
+  </div>
+</footer>
 </body>
 </html>
